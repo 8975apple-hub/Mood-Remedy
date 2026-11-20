@@ -1,0 +1,163 @@
+/*======================= 기본 여백을 0으로 변경=======================*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*======================= 웹페이지 배경 부분 설정=======================*/
+body {
+    background-color: rgb(40, 35, 60);
+    color: white;
+    padding: 30px 15px; 
+}
+
+.container {
+    max-width: 650px;
+    margin:0 auto;
+}
+
+
+/*======================= 메인 제목 부분 =======================*/
+header{
+    text-align: center;
+    padding: 30px 10px;
+}
+
+header h1{
+    font-size: 40px;
+    color: rgb(195, 170, 255);
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 15px;
+    color: white;
+    margin: 1px 0;
+}
+
+
+/*======================= 메인 콘텐츠 영역 =======================*/
+main {
+    background-color: rgb(50, 40, 70);
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid rgb(210, 210, 210);
+}
+
+main section {
+    margin-bottom: 30px;
+}
+
+main h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+/*======================= 버튼 디자인 =======================*/
+select {
+    font-size: 15px;
+    width: 100%;
+    padding: 15px;
+    background-color: rgb(40, 35, 60);
+    color: rgb(255, 255, 255);
+    border:1px solid rgb(130, 130, 130);
+    border-radius: 10px;
+}
+
+
+/*======================= 기분 선택 부분 =======================*/
+.moods{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.moods button{
+    font-size: 15px;
+    padding: 15px;
+    background-color: rgb(40, 35, 60);
+    color: white;
+    border: 1px solid rgb(130, 130, 130);
+    border-radius: 10px;
+
+}
+
+.moods button:hover {
+    background-color: rgb(140, 105, 205);
+}
+
+.moods button.selected {
+    background-color: rgb(105, 75, 165);
+    border: 1.5px solid white;
+}
+
+
+/*======================= 나라 선택 부분 =======================*/
+.country{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.country button{
+    font-size: 15px;
+    padding: 15px;
+    background-color: rgb(40, 35, 60);
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(130, 130, 130);
+    border-radius: 10px;
+}
+
+.country button:hover {
+    background-color: rgb(140, 105, 205);
+}
+
+.country button.selected {
+    background-color: rgb(105, 75, 165);
+    border: 1.5px solid white;
+}
+
+/*======================= 장르 선택 부분 =======================*/
+
+.genre{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.genre button{
+    font-size: 15px;
+    padding: 15px;
+    background-color: rgb(40, 35, 60);
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(128, 128, 128);
+    border-radius: 10px;
+}
+
+.genre button:hover {
+    background-color: rgb(140, 105, 205);
+}
+
+.genre button.selected {
+    background-color: rgb(105, 75, 165);
+    border: 1.5px solid white;
+}
+/*======================= 음악 추천 버튼 설정 =======================*/
+.recommend {
+    font-size: 20px;
+    width: 100%;
+    padding: 20px;
+    background-color: rgb(120, 85, 185);
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 10px;
+}
+.recommend:hover {
+    background-color: rgb(140, 105, 205);
+}
+
+.recommend:active {
+    background-color: rgb(105, 75, 165);
+}

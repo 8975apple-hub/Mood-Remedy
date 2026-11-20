@@ -9,9 +9,10 @@
 <body>
     <div class="container">
 
+
         <!--======================= 메인 제목 부분 =======================-->
         <header>
-            <h1>🎵 Mood Remedy</h1>
+            <h1>🎧Mood Remedy</h1>
             <p>Music Is Your Remedy.</p>
             <p>음악으로 당신을 치유하세요.</p>
         </header>
@@ -35,8 +36,8 @@
                 </select>
             </section>
 
-        
-        <!--======================= 현재 기분을 선택하는 부분 =======================-->
+    
+        <!--======================= 기분 선택 부분 =======================-->
             <section>
                 <h2>지금 기분은 어떤가요?</h2>
                 <div class="moods">
@@ -49,8 +50,23 @@
                 </div>
             </section>
 
+        <!-- ======================= 기분 선택 시 색상 변경 ======================= -->
+            <script>
+                let moodsbuttons = document.querySelectorAll('.moods button');
 
-        <!--======================= 국가/언어권을 선택하는 부분 =======================-->
+                moodsbuttons.forEach(function(button) {
+                    button.onclick = function() {
+
+                        moodsbuttons.forEach(function(b) {
+                            b.classList.remove('selected');
+                        });
+
+                        button.classList.add('selected');
+                    };
+                });
+            </script>
+
+        <!--======================= 나라 선택 부분 =======================-->
             <section>
                 <h2>어느 나라 음악을 원하나요?</h2>
                 <div class="country">
@@ -60,10 +76,30 @@
                     <button value="mix"> 🔀 MIX</button>
                 </div>
             </section>
+
+        
+        
+        <!--======================= 나라 선택 시 색상 변경 =======================-->
+
+            <script>
+                let countrybuttons = document.querySelectorAll('.country button');
+
+                countrybuttons.forEach(function(button) {
+                    button.onclick = function() {
+
+                        countrybuttons.forEach(function(b) {
+                            b.classList.remove('selected');
+                        });
+
+                        button.classList.add('selected');
+                    };
+                });
+            </script>    
+
         
 
-        <!--======================= 음악 장르를 선택하는 부분 =======================-->
-            <section>
+        <!--======================= 장르 선택 부분 =======================-->
+            <section>   
                 <h2>어떤 장르의 음악을 듣고 싶은가요?</h2>
                 <div class="genre">
                     <button value="발라드">💧 발라드</button>
@@ -75,9 +111,27 @@
                 </div>
             </section>
 
+    
+        
+            <!--======================= 장르 선택 시 색상 변경 =======================-->
+            <script>
+                let genrebuttons = document.querySelectorAll('.genre button');
+
+                genrebuttons.forEach(function(button) {
+                    button.onclick = function() {
+
+                        genrebuttons.forEach(function(b) {
+                            b.classList.remove('selected');
+                        });
+
+                        button.classList.add('selected');
+                    };
+                });
+            </script>    
+
 
         <!--======================= 음악 추천 실행 버튼 =======================-->
-            <button id="recommend" class="recommend">✨ 나에게 맞는 음악 추천받기</button>
+            <button id="recommend" class="recommend"> ✨ 나에게 맞는 음악 추천받기</button>
 
 
         <!--======================= 최종 결과 부분 =======================-->
