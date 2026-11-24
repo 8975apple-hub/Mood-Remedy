@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -17,130 +18,158 @@
             <p>음악으로 당신을 치유하세요.</p>
         </header>
 
-
         <!--======================= 현재 상태를 선택하는 부분 =======================-->
         <main>
-            <section>
-                <h2>현재 어떤 상태인가요?</h2>
-                <select id="activity">
-                    <option value="공부"> 📖 공부하는 중</option>
-                    <option value="일"> 💻 일하는 중</option>
-                    <option value="이동"> 🚃 이동하는 중</option>
-                    <option value="산책"> 🚶‍♂️ 산책하는 중</option>
-                    <option value="러닝"> 🏃 러닝하는 중</option>
-                    <option value="운동"> 🏋️‍♂️ 운동하는 중</option>
-                    <option value="게임"> 🎮 게임하는 중</option>
-                    <option value="음악"> 🎧 음악 듣는 중</option>
-                    <option value="명상"> 🧘‍♂️ 명상하는 중</option>
-                    <option value="잠"> 😴 잠자는 중</option>
-                </select>
-            </section>
+            <!--======================= 왼쪽 영역 =======================-->
+            <div class="left-panel">
+
+                <section>
+                    <h2>지금은 무엇을 하는 중인가?</h2>
+                    <select id="activity">
+                        <option value="공부"> 📖 공부하는 중</option>
+                        <option value="일"> 💻 일하는 중</option>
+                        <option value="이동"> 🚃 이동하는 중</option>
+                        <option value="산책"> 🚶‍♂️ 산책하는 중</option>
+                        <option value="러닝"> 🏃 러닝하는 중</option>
+                        <option value="운동"> 🏋️‍♂️ 운동하는 중</option>
+                        <option value="게임"> 🎮 게임하는 중</option>
+                        <option value="음악"> 🎧 음악 듣는 중</option>
+                        <option value="명상"> 🧘‍♂️ 명상하는 중</option>
+                        <option value="잠"> 😴 잠자는 중</option>
+                    </select>
+                </section>
+
+                <!--======================= 요약 부분 =======================-->
+                <section class="summation">
+
+                    <h2>나의 선택</h2>
+                    <div class="summation-box">
+
+                        <p>현재 활동 : <span id="summation-activity">공부하는 중</span></p>
+                        <p>현재 기분 : <span id="summation-mood">선택 전</span></p>
+                        <p>선택 나라 : <span id="summation-country">선택 전</span></p>
+                        <p>선택 장르 : <span id="summation-genre">선택 전</span></p>
+                    </div>
+                </section>
+
+            </div>
 
     
-        <!--======================= 기분 선택 부분 =======================-->
-            <section>
-                <h2>지금 기분은 어떤가요?</h2>
-                <div class="moods">
-                    <button value="행복">😊 행복</button>
-                    <button value="우울">😢 우울</button>
-                    <button value="설렘">🥰 설렘</button>
-                    <button value="스트레스">😫 스트레스</button>
-                    <button value="집중">🧠 집중</button>
-                    <button value="평온">😌 평온</button>
-                </div>
-            </section>
-
-        <!-- ======================= 기분 선택 시 색상 변경 ======================= -->
-            <script>
-                let moodsbuttons = document.querySelectorAll('.moods button');
-
-                moodsbuttons.forEach(function(button) {
-                    button.onclick = function() {
-
-                        moodsbuttons.forEach(function(b) {
-                            b.classList.remove('selected');
-                        });
-
-                        button.classList.add('selected');
-                    };
-                });
-            </script>
-
-        <!--======================= 나라 선택 부분 =======================-->
-            <section>
-                <h2>어느 나라 음악을 원하나요?</h2>
-                <div class="country">
-                    <button value="kpop"> 🇰🇷 K-POP</button>
-                    <button value="jpop"> 🇯🇵 J-POP</button>
-                    <button value="pop"> 🌐 POP</button>
-                    <button value="mix"> 🔀 MIX</button>
-                </div>
-            </section>
-
-        
-        
-        <!--======================= 나라 선택 시 색상 변경 =======================-->
-
-            <script>
-                let countrybuttons = document.querySelectorAll('.country button');
-
-                countrybuttons.forEach(function(button) {
-                    button.onclick = function() {
-
-                        countrybuttons.forEach(function(b) {
-                            b.classList.remove('selected');
-                        });
-
-                        button.classList.add('selected');
-                    };
-                });
-            </script>    
-
-        
-
-        <!--======================= 장르 선택 부분 =======================-->
-            <section>   
-                <h2>어떤 장르의 음악을 듣고 싶은가요?</h2>
-                <div class="genre">
-                    <button value="발라드">💧 발라드</button>
-                    <button value="댄스">💃 댄스</button>
-                    <button value="힙합">🎤 힙합 / 랩</button>
-                    <button value="R&B">🌙 R&B / 소울</button>
-                    <button value="어쿠스틱">🎸 인디 / 어쿠스틱</button>
-                    <button value="밴드">⚡ 록 / 밴드</button>
-                </div>
-            </section>
-
-    
-        
-            <!--======================= 장르 선택 시 색상 변경 =======================-->
-            <script>
-                let genrebuttons = document.querySelectorAll('.genre button');
-
-                genrebuttons.forEach(function(button) {
-                    button.onclick = function() {
-
-                        genrebuttons.forEach(function(b) {
-                            b.classList.remove('selected');
-                        });
-
-                        button.classList.add('selected');
-                    };
-                });
-            </script>    
+            <!--======================= 중앙 영역 =======================-->
+            <div class="center-panel">
+                <!--======================= 기분 선택 부분 =======================-->
+                <section>
+                    <h2>지금 기분은 어떤가요?</h2>
+                    <div class="moods">
+                        <button value="행복">😊 행복</button>
+                        <button value="우울">😢 우울</button>
+                        <button value="설렘">🥰 설렘</button>
+                        <button value="스트레스">😫 스트레스</button>
+                        <button value="집중">🧠 집중</button>
+                        <button value="평온">😌 평온</button>
+                    </div>
+                </section>
 
 
-        <!--======================= 음악 추천 실행 버튼 =======================-->
-            <button id="recommend" class="recommend"> ✨ 나에게 맞는 음악 추천받기</button>
+                <!-- ======================= 기분 선택 시 색상 변경 ======================= -->
+                <script>
+                    let moodsbuttons = document.querySelectorAll('.moods button');
+
+                    moodsbuttons.forEach(function(button) {
+                        button.onclick = function() {
+
+                            moodsbuttons.forEach(function(b) {
+                                b.classList.remove('selected');
+                            });
+
+                            button.classList.add('selected');
+                        };
+                    });
+                </script>
 
 
-        <!--======================= 최종 결과 부분 =======================-->
-            <section class="result" id="result">
-                <h2>추천 음악 결과</h2>
-                <div class="result-box">
-                    <p>상태와 기분을 선택하고 추천 버튼을 눌러보세요!</p>
-                </div>
-            </section>
+                <!--======================= 나라 선택 부분 =======================-->
+                <section>
+                    <h2>어느 나라 음악을 원하나요?</h2>
+                    <div class="country">
+                        <button value="kpop"> 🇰🇷 K-POP</button>
+                        <button value="jpop"> 🇯🇵 J-POP</button>
+                        <button value="pop"> 🌐 POP</button>
+                        <button value="mix"> 🔀 MIX</button>
+                    </div>
+                </section>
+
+
+                <!--======================= 나라 선택 시 색상 변경 =======================-->
+
+                <script>
+                    let countrybuttons = document.querySelectorAll('.country button');
+
+                    countrybuttons.forEach(function(button) {
+                        button.onclick = function() {
+
+                            countrybuttons.forEach(function(b) {
+                                b.classList.remove('selected');
+                            });
+
+                            button.classList.add('selected');
+                        };
+                    });
+                </script>
+
+
+                <!--======================= 장르 선택 부분 =======================-->
+                <section>
+                    <h2>어떤 장르의 음악을 듣고 싶은가요?</h2>
+                    <div class="genre">
+                        <button value="발라드">💧 발라드</button>
+                        <button value="댄스">💃 댄스</button>
+                        <button value="힙합">🎤 힙합 / 랩</button>
+                        <button value="R&B">🌙 R&B / 소울</button>
+                        <button value="어쿠스틱">🎸 인디 / 어쿠스틱</button>
+                        <button value="밴드">⚡ 록 / 밴드</button>
+                    </div>
+                </section>
+
+
+                <!--======================= 장르 선택 시 색상 변경 =======================-->
+                <script>
+                    let genrebuttons = document.querySelectorAll('.genre button');
+
+                    genrebuttons.forEach(function(button) {
+                        button.onclick = function() {
+
+                            genrebuttons.forEach(function(b) {
+                                b.classList.remove('selected');
+                            });
+
+                            button.classList.add('selected');
+                        };
+                    });
+                </script>
+
+            </div>
+
+
+            <!--======================= 오른쪽 영역 =======================-->
+            <div class="right-panel">
+
+                <!--======================= 음악 추천 실행 버튼 =======================-->
+                <button id="recommend" class="recommend">
+                    ✨ 나에게 맞는 음악 추천받기
+                </button>
+
+
+                <!--======================= 최종 결과 부분 =======================-->
+                <section class="result" id="result">
+                    <h2>추천 음악 결과</h2>
+                    <div class="result-box">
+                        <p>상태와 기분을 선택하고 추천 버튼을 눌러보세요!</p>
+                    </div>
+                </section>
+
+            </div>
+
         </main>
 
     </div>

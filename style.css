@@ -1,3 +1,4 @@
+
 /*======================= 기본 여백을 0으로 변경=======================*/
 * {
     margin: 0;
@@ -14,7 +15,8 @@ body {
 }
 
 .container {
-    max-width: 650px;
+    max-width: 1600px;
+    width: 100%;
     margin:0 auto;
 }
 
@@ -40,6 +42,12 @@ header p {
 
 /*======================= 메인 콘텐츠 영역 =======================*/
 main {
+    display: grid;
+    grid-template-columns: 0.85fr 1.5fr 1fr;
+    gap: 20px;
+    width: 100%;
+    min-height: 650px;
+
     background-color: rgb(50, 40, 70);
     padding: 30px;
     border-radius: 20px;
@@ -55,8 +63,20 @@ main h2 {
     margin-bottom: 15px;
 }
 
-/*======================= 버튼 디자인 =======================*/
-select {
+
+/*======================= 왼쪽 영역 설정 =======================*/
+
+.left-panel {
+    min-width: 0;
+    padding: 20px;
+    background-color: rgb(58, 47, 80);
+    border-radius: 15px;
+}
+
+
+/*======================= 현재 상태 선택 부분 =======================*/
+
+.left-panel select {
     font-size: 15px;
     width: 100%;
     padding: 15px;
@@ -67,7 +87,36 @@ select {
 }
 
 
+/*======================= 나의 선택 부분 =======================*/
+
+.summary-box {
+    background-color: rgb(40, 35, 60);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.summary-box p {
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.summary-box p:last-child {
+    margin-bottom: 0;
+}
+
+
+/*======================= 중앙 영역 설정 =======================*/
+
+.center-panel {
+    min-width: 0;
+    padding: 20px;
+    background-color: rgb(58, 47, 80);
+    border-radius: 15px;
+}
+
+
 /*======================= 기분 선택 부분 =======================*/
+
 .moods{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -95,6 +144,7 @@ select {
 
 
 /*======================= 나라 선택 부분 =======================*/
+
 .country{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -118,6 +168,7 @@ select {
     background-color: rgb(105, 75, 165);
     border: 1.5px solid white;
 }
+
 
 /*======================= 장르 선택 부분 =======================*/
 
@@ -144,7 +195,20 @@ select {
     background-color: rgb(105, 75, 165);
     border: 1.5px solid white;
 }
+
+
+/*======================= 오른쪽 영역 설정 =======================*/
+
+.right-panel {
+    min-width: 0;
+    padding: 20px;
+    background-color: rgb(58, 47, 80);
+    border-radius: 15px;
+}
+
+
 /*======================= 음악 추천 버튼 설정 =======================*/
+
 .recommend {
     font-size: 20px;
     width: 100%;
@@ -154,10 +218,20 @@ select {
     border: none;
     border-radius: 10px;
 }
+
 .recommend:hover {
     background-color: rgb(140, 105, 205);
 }
 
 .recommend:active {
     background-color: rgb(105, 75, 165);
+}
+
+
+/*======================= 추천 결과 부분 =======================*/
+
+.result-box {
+    background-color: rgb(40, 35, 60);
+    padding: 20px;
+    border-radius: 10px;
 }
